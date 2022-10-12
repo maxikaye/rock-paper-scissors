@@ -9,7 +9,8 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-    
+   let playerChoice = prompt("Please enter your weapon choice (rock, paper, scissors): ")
+   return playerChoice.toLowerCase(); 
 }
 
 function play(playerSelection, computerSelection) {
