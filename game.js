@@ -23,22 +23,28 @@ function playRound(playerSelection, computerSelection) {
             result = "Tie! Rock bounces off of Rock";
         } else if (computerSelection === "paper") {
             result = "You lose! Paper covers Rock"
+            computerScore += 1;
         } else if (computerSelection === "scissors") {
             result = "You win! Rock smashes scissors";
+            playerScore += 1;
         }
     } else if (playerSelection === "paper") {
         if (computerSelection === "rock") {
             result = "You win! Paper covers Rock";
+            playerScore += 1;
         } else if (computerSelection === "paper") {
             result = "Tie! Paper bounces off Paper"
         } else if (computerSelection === "scissors") {
             result = "You lose! Scissors cuts Paper";
+            computerScore += 1;
         }
     } else if (playerSelection === "scissors") {
         if (computerSelection === "rock") {
             result = "You lose! Rock smashes scissors";
+            computerScore += 1;
         } else if (computerSelection === "paper") {
             result = "You win! Scissors cuts Paper"
+            playerScore += 1;
         } else if (computerSelection === "scissors") {
             result = "Tie! Scissors bounces off of Scissors";
         }
