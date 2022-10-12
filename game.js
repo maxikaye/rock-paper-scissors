@@ -66,5 +66,11 @@ function game() {
         console.log(`Tie! Final Score: ${playerScore} | ${computerScore}`);
     } else {
         console.log(`You Lose!  Final Score: ${playerScore} | ${computerScore}`);
-    }   
+    }
+    reset();
+}
+
+function reset() {
+    playerScore = 0;
+    computerScore = 0;
 }
