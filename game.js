@@ -13,6 +13,34 @@ function getPlayerChoice() {
    return playerChoice.toLowerCase(); 
 }
 
-function play(playerSelection, computerSelection) {
-    
+function playRound(playerSelection, computerSelection) {
+    let result = null;
+    if (playerSelection === "rock") {
+        if (computerSelection === "rock") {
+            result = "Tie! Rock bounces off of Rock";
+        } else if (computerSelection === "paper") {
+            result = "You lose! Paper covers Rock"
+        } else if (computerSelection === "scissors") {
+            result = "You win! Rock smashes scissors";
+        }
+    } else if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
+            result = "You win! Paper covers Rock";
+        } else if (computerSelection === "paper") {
+            result = "Tie! Paper bounces off Paper"
+        } else if (computerSelection === "scissors") {
+            result = "You lose! Scissors cuts Paper";
+        }
+    } else if (playerSelection === "scissors") {
+        if (computerSelection === "rock") {
+            result = "You lose! Rock smashes scissors";
+        } else if (computerSelection === "paper") {
+            result = "You win! Scissors cuts Paper"
+        } else if (computerSelection === "scissors") {
+            result = "Tie! Scissors bounces off of Scissors";
+        }
+    } else {
+        result = `${playerSelection} is not a valid weapon.`
+    }
+    return result;
 }
