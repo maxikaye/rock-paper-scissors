@@ -2,6 +2,9 @@
 // Implementation by Maxi Kaye
 // github.com/maxikaye
 
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     const weapons = ["rock", "paper", "scissors"];
     let choice = Math.floor(Math.random() * 3);
@@ -43,4 +46,13 @@ function playRound(playerSelection, computerSelection) {
         result = `${playerSelection} is not a valid weapon.`
     }
     return result;
+}
+
+function game() {
+    const rounds = 5;
+    for (let i = 0; i < rounds; i++) {
+        let roundResult = playRound(getPlayerChoice(), getComputerChoice());
+        console.log(roundResult);
+    }
+    //return playerScore > computerScore ? "You Win!" : "You Lose"
 }
