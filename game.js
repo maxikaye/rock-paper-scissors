@@ -7,3 +7,11 @@ function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
     return weapons[choice];
 }
+
+function getPlayerChoice() {
+    
+}
+
+function play(playerSelection, computerSelection) {
+    
+}
