@@ -58,7 +58,13 @@ function game() {
     const rounds = 5;
     for (let i = 0; i < rounds; i++) {
         let roundResult = playRound(getPlayerChoice(), getComputerChoice());
-        console.log(roundResult);
+        console.log(`${roundResult} | Player Score: ${playerScore} | Computer Score: ${computerScore}`);
     }
-    //return playerScore > computerScore ? "You Win!" : "You Lose"
+    if (playerScore > computerScore) {
+        console.log(`You Win! Final Score: ${playerScore} | ${computerScore}`);
+    } else if (playerScore === computerScore) {
+        console.log(`Tie! Final Score: ${playerScore} | ${computerScore}`);
+    } else {
+        console.log(`You Lose!  Final Score: ${playerScore} | ${computerScore}`);
+    }   
 }
