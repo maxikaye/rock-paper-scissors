@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         result = `${playerSelection} is not a valid weapon.`
     }
-    return result;
+    console.log(result);
 }
 
 /* function game() {
@@ -75,3 +75,13 @@ function reset() {
     playerScore = 0;
     computerScore = 0;
 }
+
+reset();
+
+const rock = document.querySelector('#btn-rock');
+const paper = document.querySelector('#btn-paper');
+const scissors = document.querySelector('#btn-scissors');
+
+rock.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
+paper.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
+scissors.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
