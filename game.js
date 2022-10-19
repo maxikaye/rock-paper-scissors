@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function game() {
+/* function game() {
     const rounds = 5;
     for (let i = 0; i < rounds; i++) {
         let roundResult = playRound(getPlayerChoice(), getComputerChoice());
@@ -69,6 +69,7 @@ function game() {
     }
     reset();
 }
+*/
 
 function reset() {
     playerScore = 0;
