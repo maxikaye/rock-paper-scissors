@@ -12,6 +12,8 @@ const scissors = document.querySelector('#btn-scissors');
 
 const results = document.querySelector('.results');
 const resultsText = document.createElement('p');
+resultsText.textContent = "Let's play!";
+results.appendChild(resultsText);
 
 function getComputerChoice() {
     const weapons = ["rock", "paper", "scissors"];
@@ -19,14 +21,13 @@ function getComputerChoice() {
     return weapons[choice];
 }
 
-function getPlayerChoice() {
-   let playerChoice = prompt("Please enter your weapon choice (rock, paper, scissors): ")
-   return playerChoice.toLowerCase(); 
-}
+// function getPlayerChoice() {
+//    let playerChoice = prompt("Please enter your weapon choice (rock, paper, scissors): ")
+//    return playerChoice.toLowerCase(); 
+// }
 
 function showResults() {
     resultsText.textContent = roundResult;
-    results.appendChild(resultsText);
 }
 
 function playRound(playerSelection, computerSelection) {
