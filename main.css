@@ -1,8 +1,67 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
 button {
     width: 150px;
     height: 150px;
 }
 
+.container {
+    max-width:  950px;
+    margin: 0 auto;
+}
+
+header {
+
+}
+
+.logo {
+
+}
+
+.title {
+
+}
+
+.gameplay-display {
+
+}
+
+.scores {
+
+}
+
+#player-score {
+
+}
+
+#computer-score {
+
+}
+
 .results {
     height: 150px;
+}
+
+.gameplay-buttons {
+
+}
+
+footer {
+    
 }
