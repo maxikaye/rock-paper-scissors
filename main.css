@@ -10,24 +10,22 @@ html {
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
 }
 
 a {
     text-decoration: none;
-}
-
-button {
-    width: 150px;
-    height: 150px;
+    color: #DDD;
+    font-weight: 700;
 }
 
 .container {
-    max-width:  950px;
+    max-width:  650px;
     margin: 0 auto;
 }
 
 header {
-
+    display: flex;
 }
 
 .logo {
@@ -35,7 +33,8 @@ header {
 }
 
 .title {
-
+    padding-right: 24px;
+    font-weight: bold;
 }
 
 .gameplay-display {
@@ -59,9 +58,36 @@ header {
 }
 
 .gameplay-buttons {
+    display: flex;
+}
+
+button {
+    width: 150px;
+    height: 150px;
+    flex: 1 0 auto;
+    background-size: contain;
+    margin: 16px;
+}
+
+button:hover {
+    
+}
+
+#btn-rock {
+
+}
+
+#btn-paper {
+
+}
+
+#btn-scissors {
 
 }
 
 footer {
-    
+    padding: 12px 24px;
+    background: teal;
+    font-size: 16px;
+    color: #FFF;
 }
