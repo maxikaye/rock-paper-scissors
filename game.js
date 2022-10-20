@@ -25,6 +25,16 @@ function showResults() {
     resultsText.textContent = roundResult;
 }
 
+function checkForWin() {
+    if (playerScore >= 5) {
+        roundResult = "GAME OVER - YOU WIN!";
+        setTimeout(showResults(), 700);
+    } else if (computerScore >= 5) {
+        roundResult = "GAME OVER - YOU LOSE!";
+        setTimeout(showResults(), 700);
+    }
+}
+
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === "rock") {
@@ -62,6 +72,7 @@ function playRound(playerSelection, computerSelection) {
     }
 
     showResults();
+    checkForWin();
 }
 
 function reset() {
