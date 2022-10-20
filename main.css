@@ -11,6 +11,7 @@ html {
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
+    background-color: #AAA;
 }
 
 a {
@@ -24,12 +25,21 @@ a {
     margin: 0 auto;
 }
 
+header,
+footer {
+    padding: 12px 24px;
+    background: teal;
+    color: #FFF;
+}
+
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .logo {
-
+    font-size: 16px;
 }
 
 .title {
@@ -38,35 +48,48 @@ header {
 }
 
 .gameplay-display {
-
+    margin: 12px auto;
+    padding-top: 24px;
+    background-color: #333;
+    color: #CCC;
 }
 
 .scores {
-
+    display: flex;
+    justify-content: space-around;
+    font-size: 96px;
 }
 
-#player-score {
-
+#player-score::before {
+    content: "PLAYER";
+    font-size: 16px;
+    padding-right: 16px;
 }
 
-#computer-score {
-
+#computer-score::after {
+    content: "CPU";
+    font-size: 16px;
+    padding-left: 16px;
 }
 
 .results {
     height: 150px;
+    padding: 24px;
+    text-align: center;
+    font-size: 36px;
 }
 
 .gameplay-buttons {
     display: flex;
+    justify-content: space-evenly;
+    gap: 24px;
 }
 
 button {
-    width: 150px;
-    height: 150px;
-    flex: 1 0 auto;
+    width: 200px;
+    height: 200px;
+    flex: 0 1 auto;
     background-size: contain;
-    margin: 16px;
 }
 
 button:hover {
@@ -86,8 +109,5 @@ button:hover {
 }
 
 footer {
-    padding: 12px 24px;
-    background: teal;
     font-size: 16px;
-    color: #FFF;
 }
