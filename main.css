@@ -12,6 +12,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     background-color: #AAA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 a {
@@ -27,8 +31,9 @@ a {
 
 header,
 footer {
+    min-width: 650px;
     padding: 12px 24px;
-    background: teal;
+    background: #555;
     color: #FFF;
 }
 
@@ -50,8 +55,10 @@ header {
 .gameplay-display {
     margin: 12px auto;
     padding-top: 24px;
-    background-color: #333;
+    min-width: 650px;
+    background-color: #222;
     color: #CCC;
+    border-radius: 12px;
 }
 
 .scores {
@@ -73,7 +80,7 @@ header {
 }
 
 .results {
-    height: 150px;
+    height: 250px;
     padding: 24px;
     text-align: center;
     font-size: 36px;
@@ -90,6 +97,8 @@ button {
     height: 200px;
     flex: 0 1 auto;
     background-size: contain;
+    border: 0;
+    border-radius: 8px;
 }
 
 button:hover {
@@ -97,15 +106,15 @@ button:hover {
 }
 
 #btn-rock {
-
+    background-image: url("./images/icon_rock.png");
 }
 
 #btn-paper {
-
+    background-image: url("./images/icon_paper.png");
 }
 
 #btn-scissors {
-
+    background-image: url("./images/icon_scissors.png");
 }
 
 footer {
