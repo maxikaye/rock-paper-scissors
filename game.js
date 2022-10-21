@@ -34,33 +34,40 @@ function updateScore() {
     computerScoreDisplay.innerHTML = computerScore;
 }
 
+function playAgain() {
+    const btnPlayAgain = document.createElement('button');
+    btnPlayAgain.textContent = "Play Again?";
+    btnPlayAgain.classList.add('play-again');
+    results.appendChild(btnPlayAgain);
+    btnPlayAgain.addEventListener('click', e => {
+        results.removeChild(btnPlayAgain);
+        reset();
+    });
+}
+
 function endGame () {
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
 
-    // Change to modal window with button
-    setTimeout(resultsText.textContent += "  Want to play again? - Click here", 5000);
-    results.addEventListener('click', e => reset());
+    setTimeout(playAgain, 600);
 }
 
 function checkForWin() {
     if (playerScore >= 5) {
         roundResult = "GAME OVER - YOU WIN!";
         gameOver = true;
-        setTimeout(showResults(), 1000);
+        setTimeout(showResults, 1000);
     } else if (computerScore >= 5) {
         roundResult = "GAME OVER - YOU LOSE!";
         gameOver = true;
-        setTimeout(showResults(), 1000);
+        setTimeout(showResults, 1000);
     }
 
     if (gameOver) endGame();
 }
 
 function playRound(playerSelection, computerSelection) {
-
-    // TODO: Show computer selection, maybe round history?
 
     if (playerSelection === "rock") {
         if (computerSelection === "rock") {

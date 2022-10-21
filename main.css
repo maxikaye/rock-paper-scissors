@@ -90,6 +90,17 @@ header {
     font-size: 36px;
 }
 
+.play-again {
+    border: 0;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+    padding: 8px 16px;
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
 .gameplay-buttons {
     display: flex;
     justify-content: space-evenly;
