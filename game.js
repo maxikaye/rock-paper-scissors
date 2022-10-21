@@ -5,6 +5,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let roundResult = null;
+let gameOver = false;
 
 const rock = document.querySelector('#btn-rock');
 const paper = document.querySelector('#btn-paper');
@@ -12,7 +13,6 @@ const scissors = document.querySelector('#btn-scissors');
 
 const results = document.querySelector('.results');
 const resultsText = document.createElement('p');
-resultsText.textContent = "Let's play!";
 results.appendChild(resultsText);
 
 const playerScoreDisplay = document.querySelector('#player-score');
@@ -34,14 +34,27 @@ function updateScore() {
     computerScoreDisplay.innerHTML = computerScore;
 }
 
+function endGame () {
+    rock.disabled = true;
+    paper.disabled = true;
+    scissors.disabled = true;
+
+    setTimeout(resultsText.textContent += "  Want to play again? - Click here", 5000);
+    results.addEventListener('click', e => reset());
+}
+
 function checkForWin() {
     if (playerScore >= 5) {
         roundResult = "GAME OVER - YOU WIN!";
-        setTimeout(showResults(), 700);
+        gameOver = true;
+        setTimeout(showResults(), 1000);
     } else if (computerScore >= 5) {
         roundResult = "GAME OVER - YOU LOSE!";
-        setTimeout(showResults(), 700);
+        gameOver = true;
+        setTimeout(showResults(), 1000);
     }
+
+    if (gameOver) endGame();
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -88,6 +101,10 @@ function playRound(playerSelection, computerSelection) {
 function reset() {
     playerScore = 0;
     computerScore = 0;
+    resultsText.textContent = "Let's play Rock, Paper, Scissors! First to 5 points wins.";
+    rock.disabled = false;
+    paper.disabled = false;
+    scissors.disabled = false;
 }
 
 reset();
