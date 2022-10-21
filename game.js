@@ -99,6 +99,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function reset() {
+    gameOver = false;
     playerScore = 0;
     computerScore = 0;
     updateScore();
