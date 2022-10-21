@@ -120,6 +120,11 @@ button:hover {
     border: 2px solid red;
 }
 
+button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
 #btn-rock {
     background-image: url("./images/icon_rock.png");
 }

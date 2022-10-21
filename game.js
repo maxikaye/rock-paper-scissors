@@ -57,11 +57,11 @@ function checkForWin() {
     if (playerScore >= 5) {
         roundResult = "GAME OVER - YOU WIN!";
         gameOver = true;
-        setTimeout(showResults, 1000);
+        setTimeout(showResults, 500);
     } else if (computerScore >= 5) {
         roundResult = "GAME OVER - YOU LOSE!";
         gameOver = true;
-        setTimeout(showResults, 1000);
+        setTimeout(showResults, 500);
     }
 
     if (gameOver) endGame();
@@ -121,8 +121,6 @@ function reset() {
 
 reset();
 
-
-// TODO : Add click transition
 rock.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
 paper.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
 scissors.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
