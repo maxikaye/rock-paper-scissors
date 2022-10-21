@@ -39,6 +39,7 @@ function endGame () {
     paper.disabled = true;
     scissors.disabled = true;
 
+    // Change to modal window with button
     setTimeout(resultsText.textContent += "  Want to play again? - Click here", 5000);
     results.addEventListener('click', e => reset());
 }
@@ -58,6 +59,8 @@ function checkForWin() {
 }
 
 function playRound(playerSelection, computerSelection) {
+
+    // TODO: Show computer selection, maybe round history?
 
     if (playerSelection === "rock") {
         if (computerSelection === "rock") {
@@ -111,6 +114,8 @@ function reset() {
 
 reset();
 
+
+// TODO : Add click transition
 rock.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
 paper.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));
 scissors.addEventListener('click', e => playRound(e.target.name, getComputerChoice()));

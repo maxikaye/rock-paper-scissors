@@ -41,16 +41,17 @@ footer {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     background: linear-gradient(#555,#AAA);
 }
 
 .logo {
     font-size: 16px;
+    font-weight: 300;
 }
 
 .title {
-    padding-right: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -95,7 +96,7 @@ header {
     gap: 24px;
 }
 
-button {
+.weapon {
     width: 200px;
     height: 200px;
     flex: 0 1 auto;
@@ -122,5 +123,6 @@ button:hover {
 
 footer {
     font-size: 16px;
+    font-weight: 300;
     background: linear-gradient(0deg, #555, #AAA);
 }
