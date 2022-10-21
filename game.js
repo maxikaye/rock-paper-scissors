@@ -15,6 +15,10 @@ const resultsText = document.createElement('p');
 resultsText.textContent = "Let's play!";
 results.appendChild(resultsText);
 
+const playerScoreDisplay = document.querySelector('#player-score');
+const computerScoreDisplay = document.querySelector('#computer-score');
+
+
 function getComputerChoice() {
     const weapons = ["rock", "paper", "scissors"];
     let choice = Math.floor(Math.random() * 3);
@@ -23,6 +27,11 @@ function getComputerChoice() {
 
 function showResults() {
     resultsText.textContent = roundResult;
+}
+
+function updateScore() {
+    playerScoreDisplay.innerHTML = playerScore;
+    computerScoreDisplay.innerHTML = computerScore;
 }
 
 function checkForWin() {
@@ -72,6 +81,7 @@ function playRound(playerSelection, computerSelection) {
     }
 
     showResults();
+    updateScore();
     checkForWin();
 }
 
