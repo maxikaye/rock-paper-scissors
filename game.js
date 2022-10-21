@@ -101,6 +101,7 @@ function playRound(playerSelection, computerSelection) {
 function reset() {
     playerScore = 0;
     computerScore = 0;
+    updateScore();
     resultsText.textContent = "Let's play Rock, Paper, Scissors! First to 5 points wins.";
     rock.disabled = false;
     paper.disabled = false;
